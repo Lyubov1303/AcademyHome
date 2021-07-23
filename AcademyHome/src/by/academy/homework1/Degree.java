@@ -13,7 +13,7 @@ public class Degree {
 			System.out.println(n+ " в степени " +j+"="+ r); 
 			j++;
 			r=r*j;
-			}while (r<=1_000_000)
+			}while (r<=1000000)
 	    	;
 }
 	}
