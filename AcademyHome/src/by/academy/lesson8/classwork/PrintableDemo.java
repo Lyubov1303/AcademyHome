@@ -1,6 +1,7 @@
 package by.academy.lesson8.classwork;
 
 public class PrintableDemo {
+
 	public static void main(String... args) {
 
 		Printable b = new Book();
@@ -24,3 +25,4 @@ public class PrintableDemo {
 
 	}
 }
+
