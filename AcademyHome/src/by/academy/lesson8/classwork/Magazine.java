@@ -13,5 +13,6 @@ public class Magazine implements Printable {
 				o.print();
 			}
 		}
-	}
-
+	
+}
+}

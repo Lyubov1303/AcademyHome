@@ -1,4 +1,4 @@
-package by.academy.lesson7.classwork;
+package Deal;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public class ProductCheese extends Product {
     protected double discount() {
     	if (age<5) {
     		return 0.15;
-    };
+    }
     return 0;
     }
 	public ProductCheese(int age) {

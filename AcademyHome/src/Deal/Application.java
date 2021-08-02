@@ -1,4 +1,4 @@
-package by.academy.lesson7.classwork;
+package Deal;
 
 public class Application {
 	public static void main(String... args) {
@@ -10,19 +10,18 @@ public class Application {
 
 		products[0] = new ProductWine("Винишко", 30, 1, "White");
 		products[1] = new ProductCheese("Сыр", 45, 2, 11);
-		products[2] = new ProductCheese("Сыр", 5, 20, 1);
+		products[2] = new ProductJuice("Сок Rio", 2, 10, "Apple", 2.0);
 
 		deal.setBuyer(buyer);
 		deal.setSeller(seller);
 
 		deal.setProducts(products);
+		
+		User.dateOfBirth();
+		
+		deal.deadlineDate();
 
-		System.out.println("Bill:");
-		for (Product p : deal.getProducts()) {
-			System.out.println(p.getName() + " price: " + p.calcPrice());
-		}
-		System.out.println("-------------");
-		System.out.println("Full price: " + deal.calcFullPrice());
+		deal.deal();
 
 	}
 }

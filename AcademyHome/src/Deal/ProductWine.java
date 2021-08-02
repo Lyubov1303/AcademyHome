@@ -1,4 +1,4 @@
-package by.academy.lesson7.classwork;
+package Deal;
 
 import java.util.Objects;
 
@@ -21,9 +21,10 @@ public class ProductWine extends Product {
 	protected double discount() {
     	if ("Red".equals(color)) {
     		return 0.25;
-    };
+    }
     return 0;
     }
+	
 	public String getColor() {
 		return color;
 	}

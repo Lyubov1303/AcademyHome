@@ -1,4 +1,4 @@
-package by.academy.lesson7.classwork;
+package Deal;
 
 public abstract class Product {
 	protected String name;
