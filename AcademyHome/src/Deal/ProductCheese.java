@@ -1,6 +1,7 @@
 package Deal;
 
 import java.util.Objects;
+@ProductProvide(lifeTime = 2, parts = { "Молоко" })
 
 public class ProductCheese extends Product {
 	private int age;

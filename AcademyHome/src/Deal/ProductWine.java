@@ -2,6 +2,8 @@ package Deal;
 
 import java.util.Objects;
 
+@ProductProvide(lifeTime = 24, parts = { "Виноград" })
+
 public class ProductWine extends Product {
 	private String color;
 	

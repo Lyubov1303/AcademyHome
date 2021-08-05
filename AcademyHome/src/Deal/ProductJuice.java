@@ -2,6 +2,8 @@ package Deal;
 
 import java.util.Objects;
 
+@ProductProvide(lifeTime = 12, parts = { "Фрукт, вода, сахар" })
+
 public class ProductJuice extends Product {
 	private String type;
 	private double volume;
