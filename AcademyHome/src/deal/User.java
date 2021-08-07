@@ -1,4 +1,4 @@
-package Deal;
+package deal;
 
 import java.util.Objects;
 import java.util.Scanner;

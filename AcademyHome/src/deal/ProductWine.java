@@ -1,6 +1,8 @@
-package Deal;
+package deal;
 
 import java.util.Objects;
+
+import deal.annatation.ProductProvide;
 
 @ProductProvide(lifeTime = 24, parts = { "Виноград" })
 

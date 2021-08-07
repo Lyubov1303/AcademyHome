@@ -17,7 +17,7 @@ public class ArrayListCustomDemo {
 		System.out.println(Arrays.toString(obj.getItems()));
 		obj.remove(3);
 		System.out.println(Arrays.toString(obj.getItems()));
-		obj.remove(3);
+		
 	}
 
 }

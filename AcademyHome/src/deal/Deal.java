@@ -1,4 +1,4 @@
-package Deal;
+package deal;
 
 import java.util.Date;
 import java.time.LocalDate;

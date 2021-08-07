@@ -1,4 +1,4 @@
-package Deal;
+package deal;
 
 public abstract class Product {
 	protected String name;
