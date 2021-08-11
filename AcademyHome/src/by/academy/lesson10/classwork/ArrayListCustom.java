@@ -1,7 +1,6 @@
 package by.academy.lesson10.classwork;
 
 public class ArrayListCustom<T> {
-
 	private T[] items;
 	private int size;
 
@@ -23,21 +22,18 @@ public class ArrayListCustom<T> {
 		size = items.length;
 	}
 
+	@SuppressWarnings("unchecked")
 	private void growth() {
-		@SuppressWarnings("unchecked")
 		T[] temp = (T[]) new Object[2 * items.length + 1];
 		System.arraycopy(items, 0, temp, 0, items.length);
 		items = temp;
-
 	}
 
 	public void add(T item) {
 		if (size >= items.length) {
 			growth();
-
-			items[size++] = item;
 		}
-
+		items[size++] = item;
 	}
 
 	public void remove(int index) {
@@ -46,32 +42,33 @@ public class ArrayListCustom<T> {
 			return;
 		}
 
-		if (index < size - 1) {
+		if (index < size) {
 			System.arraycopy(items, index + 1, items, index, size - index - 1);
-			items[--size] = null;
 		}
-		items[size--] = null;
-	}
-
-	public void remove(int index, T item) {
+		items[--size] = null;
 	}
 
 	public void set(int index, T item) {
-
+		if (index >= items.length || index < 0) {
+			System.out.println(index + " indexOutBoundOfArray");
+			return;
+		}
+		if (index >= size) {
+			items[size++] = item;
+		} else {
+			items[index] = item;
+		}
 	}
 
 	public T get(int index) {
 		if (index >= size || index < 0) {
-			System.out.println("Выход за пределы массива");
+			System.out.println("Выход за предел массива");
 			return null;
 		} else {
 			return items[index];
 		}
 	}
-
 	public T[] getItems() {
 		return items;
-
 	}
-
 }

@@ -3,8 +3,9 @@ package by.academy.lesson10.classwork;
 import java.util.Arrays;
 
 public class ArrayListCustomDemo {
+
 	public static void main(String[] args) {
-		Integer[] arrInt = { 1, 2, 3 };
+		Integer[] arrInt = {1,2,3};
 		ArrayListCustom<Integer> obj = new ArrayListCustom<>(arrInt);
 		System.out.println(Arrays.toString(obj.getItems()));
 		obj.add(4);
@@ -17,7 +18,10 @@ public class ArrayListCustomDemo {
 		System.out.println(Arrays.toString(obj.getItems()));
 		obj.remove(3);
 		System.out.println(Arrays.toString(obj.getItems()));
-		
+		obj.set(6, 7);
+		obj.set(0, 32);
+		obj.set(7, 5);
+		System.out.println(Arrays.toString(obj.getItems()));
 	}
 
 }
