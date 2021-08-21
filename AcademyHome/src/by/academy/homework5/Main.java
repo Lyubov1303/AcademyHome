@@ -3,8 +3,10 @@ package by.academy.homework5;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Main {
@@ -29,6 +31,10 @@ public class Main {
 		System.out.println(System.currentTimeMillis() - time);
 
 	}
+	
+	private final static String fishText = 
+			"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse nec massa quis eros molestie luctus.";
+		
 
 	public static void main(String[] args) {
 //Задача 1.
@@ -63,7 +69,21 @@ public class Main {
 		while (iterator1.hasNext()) {
 			System.out.print(iterator1.next() + " ");
 		}
-		
-		
-	}
-}
+	
+//Задача 4.
+		 
+		 String[] str = fishText.split("");
+         HashMap<Character, Integer> dictionary = new HashMap<>();
+         int count=1;
+         for (int i = 0; i < fishText.length(); i++) {
+             for (int j = 0; j <fishText.length(); j++) {
+                 if (str[i].equals(str[j])) {
+                     count++;
+                 }
+             }
+             dictionary.put(str[i].charAt(0), count);
+             count = 0;
+         }
+         System.out.println(dictionary);
+     }
+ }
