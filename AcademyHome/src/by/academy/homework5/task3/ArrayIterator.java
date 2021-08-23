@@ -1,7 +1,6 @@
-package by.academy.homework5;
+package by.academy.homework5.task3;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 public class ArrayIterator<T> implements Iterator<T> {
 
