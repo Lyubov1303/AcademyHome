@@ -32,7 +32,7 @@ public class Task4 {
 		}
 		file = new File("src\\io\\homework6\\task2.txt");
 		if (!file.exists()) {
-			System.err.println("Text file has not been created");
+			System.err.println("Текстовый файл отсутствует");
 			return;
 		}
 		try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
