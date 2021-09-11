@@ -1,0 +1,43 @@
+{
+	"books": [
+		{
+			"name": "Book1",
+			"author": "Book1 Author"
+			"pages": {
+				{
+					"number" : 1,
+					"text" : "page 1"
+				},
+				{
+					"number" : 2,
+					"text" : "page 2"
+				},	
+				{
+					"number" : 3,
+					"text" : "page 3"
+				}
+			}	
+		}
+		{
+			"name": "Book1",
+			"author": "Book1 Author"
+			"pages": {
+				{
+					"number" : 1,
+					"text" : "page 1"
+				},
+				{
+					"number" : 2,
+					"text" : "page 2"
+				},	
+				{
+					"number" : 3,
+					"text" : "page 3"
+				}
+			}	
+		}
+	]
+    
+
+
+
