@@ -1,39 +1,35 @@
 package by.academy.lesson19.classwork;
 
+import java.util.LinkedList;
+
 public class Port {
-	
-	private int ship = 0;
 
-	public synchronized void decrease() {
-		while (ship < 1) {
-			try {
-				wait();
-				System.out.println("Ждем корабль");
-			} catch (InterruptedException e) {
-				System.err.println(e);
-			}
-		}
-		ship--;
-		System.out.println(Thread.currentThread().getName() + "Consumer sent 1 ship. Number of ships: " + ship);
-		notify();
+	private LinkedList<Dock> docs;
+
+	public Port(LinkedList<Dock> docs) {
+		super();
+		this.docs = docs;
 	}
 
-	public synchronized void accept() {
-		while (ship >= 8) {
+	public synchronized Dock takeDock() {
+
+		Dock dock = docs.poll();
+
+		while (dock == null) {
 			try {
 				wait();
-				System.out.println("Ждем место");
+				System.out.println("Ждем свободный причал");
 			} catch (InterruptedException e) {
-				System.out.println(e);
-
+				e.printStackTrace();
 			}
+			dock = docs.poll();
 		}
-		ship++;
-		System.out
-				.println(Thread.currentThread().getName() + "Producer accepted 1 ship. Number of ships: " + ship);
-		notify();
+		return dock;
 	}
 
+	public synchronized void leaveDock(Dock dock) {
+		docs.add(dock);
+		System.out.println("Причал освободился");
+		notify();
+	}
 }
-
-
